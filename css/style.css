@@ -1,3 +1,5 @@
+/*Definição de fontes*/
+
 @font-face {
     font-family: "unbounded";
     src: url("../fonts/Unbounded-Bold.ttf") format("truetype");
@@ -14,20 +16,14 @@
     font-display: swap;
 }
 
-@media (max-width: 768px) {
-    body {
-        background-color: red;
-    }
-}
+/* reset */
 
 * {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
 }
+
+/* Estilo desktop */
 
 body {
     background-color: #0E1014;
@@ -36,7 +32,7 @@ body {
 
 .imagem-logo {
     display:  block;
-    margin: 75px 0 0 360;
+    margin: 40px 0 0 360px;
 }
 
 .titulo-principal {
@@ -46,7 +42,17 @@ body {
     font-weight: bold;
     font-weight: 100;
     text-align: center;
+    margin-top: 50px;
     
+}
+
+.titulo-principal .titulo-linha {
+    display: block;
+    text-decoration: none;
+}
+
+.titulo-principal .titulo-destaque {
+    color: #F5F5F5;
 }
 
 .descricao-principal {
@@ -78,20 +84,46 @@ body {
 }
 
 .imagem-celulares {
-    
-}
-
-.titulo-principal .titulo-linha {
     display: block;
-    text-decoration: none;
+    width: 792px;
+    height: 446px;
+    margin: 0 auto;
 }
 
-.titulo-principal .titulo-destaque {
-    color: #F5F5F5;
+
+@media (max-width: 768px) {
+
+    .imagem-logo {
+        margin: 65px 0 0 60px;
+    }
+
+    .descricao-principal {
+        width: 648px;
+    }
 }
 
+@media (max-width: 375px) {
 
+    .imagem-logo {
+        margin: 32px 0 0 16px;
+    }
 
+    .titulo-principal {
+        font-size: 40px;
+    }
 
+    .descricao-principal {
+        font-size: 20px;
+        width: 340px;
+    }
 
+    .botao-principal {
+        font-size: 20px;
+        width: 251px;
+    }
 
+    .imagem-celulares {
+        width: 340px;
+        height: 230px;
+    }
+}
